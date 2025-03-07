@@ -1,5 +1,73 @@
 ---
 
+---
+#### JC Notes 
+
+Here are a few examples of how to write tests in Gradle using JUnit 5:
+
+1. **Basic Test with Assertions**:
+
+```java 
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
+
+public class AnnalynsInfiltrationTest {
+
+    @Test
+    public void cannot_execute_fast_attack_if_knight_is_awake() {
+        boolean knightIsAwake = true;
+        assertThat(AnnalynsInfiltration.canFastAttack(knightIsAwake)).isFalse();
+    }
+}
+```
+
+In this example, the `@Test` annotation marks the method as a test case. The `assertThat` method from AssertJ is used to verify the expected outcome.
+
+2. **Test with Display Name and Tag**:
+
+```java
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
+
+public class AnnalynsInfiltrationTest {
+
+    @Test
+    @Tag("task:1")
+    @DisplayName("The canFastAttack method returns true when knight is sleeping")
+    public void can_execute_fast_attack_if_knight_is_sleeping() {
+        boolean knightIsAwake = false;
+        assertThat(AnnalynsInfiltration.canFastAttack(knightIsAwake)).isTrue();
+    }
+}
+```
+
+Here, `@DisplayName` provides a custom name for the test, and `@Tag` is used to categorize the test.
+
+3. **Test with Multiple Assertions**:
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
+
+public class AnnalynsInfiltrationTest {
+
+    @Test
+    public void can_spy_if_everyone_but_knight_is_sleeping() {
+        boolean knightIsAwake = true;
+        boolean archerIsAwake = false;
+        boolean prisonerIsAwake = false;
+        assertThat(AnnalynsInfiltration.canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake)).isTrue();
+    }
+}
+```
+
+This example shows a test method with multiple parameters and assertions to check the behavior of the `canSpy` method.
+
+These examples should give you a good starting point for writing tests in Gradle using JUnit 5. If you have any more questions or need further assistance, feel free to ask!
+
+---
 # Annalyn's Infiltration
 
 Welcome to Annalyn's Infiltration on Exercism's Java Track.
