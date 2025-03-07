@@ -1,6 +1,11 @@
----
+# Annalyn's Infiltration
+
+Welcome to Annalyn's Infiltration on Exercism's Java Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 
 ---
+
 #### JC Notes 
 
 Here are a few examples of how to write tests in Gradle using JUnit 5:
@@ -68,11 +73,6 @@ This example shows a test method with multiple parameters and assertions to chec
 These examples should give you a good starting point for writing tests in Gradle using JUnit 5. If you have any more questions or need further assistance, feel free to ask!
 
 ---
-# Annalyn's Infiltration
-
-Welcome to Annalyn's Infiltration on Exercism's Java Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
-If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 
 ## Introduction
 
